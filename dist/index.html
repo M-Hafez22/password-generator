@@ -18,7 +18,38 @@
             <button id="copy">Copy</button>
             <p id="copiedMessage">Password Copied</p>
         </div>
-        <div id="controlBoard"></div>
+        <div id="controlBoard">
+            <form id="control" action="">
+                <div>
+                    <input type="range" min="4" max="64" step="1" id="pw-slider" value="14">
+                    <span id="lenght">14</span>
+                    <p id="rate">(Bad, Weak, Strong)</p>
+                </div>
+                <!-- checkbox -->
+                <div class="checkbox-group">
+                    <div class="checkbox">
+                        <input name="number" id="number" type="checkbox" checked />
+                        <label for="number">0-9</label>
+                    </div>
+                    <div class="checkbox">
+                        <input id="lower" type="checkbox" checked />
+                        <label for="lower">a-z</label>
+                    </div>
+                    <div class="checkbox">
+                        <input id="upper" type="checkbox" checked />
+                        <label for="upper">A-Z</label>
+                    </div>
+                    <div class="checkbox">
+                        <input id="symbols" type="checkbox" checked />
+                        <label for="symbols">!@#$%^&*_+=</label>
+                    </div>
+                    <div class="checkbox">
+                        <input id="ambiguousSymbols" type="checkbox" checked />
+                        <label for="ambiguousSymbols">{}[]()/\'"`~,;:.<></label>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
 </body>
 
