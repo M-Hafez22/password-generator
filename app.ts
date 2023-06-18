@@ -27,3 +27,7 @@ const ambiguousSymbols = "{}[]()/\\'\"`~,;:.<>"
 // Create a password at the application startup
 
 // Copy password to the clipboard
+// shuffling a String
+const shufflingString = (str: string): string => {
+  return [...str].sort(() => Math.random() - 0.5).join("")
+}
