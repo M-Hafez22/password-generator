@@ -14,6 +14,9 @@ const lowerCheckboxEl = document.getElementById("lower");
 const symbolsCheckboxEl = document.getElementById("symbols");
 const ambiguousSymbolsCheckboxEl = document.getElementById("ambiguousSymbols");
 const rateEl = document.getElementById("rate");
+// copy Button
+const copyBtn = document.getElementById("copy");
+const coppiedMessage = document.getElementById("coppiedMessage");
 // Get password length
 let pwlength = 14; // The default password length
 // Show the Password Length
@@ -82,7 +85,23 @@ controlForm === null || controlForm === void 0 ? void 0 : controlForm.addEventLi
 generatorEL === null || generatorEL === void 0 ? void 0 : generatorEL.addEventListener("click", function () {
     generatePW(pwlength);
 });
-// TODO Copy password to the clipboard
+// Copy password to the clipboard
+copyBtn.addEventListener("click", function async() {
+    let text = pwEl.innerHTML;
+    try {
+        navigator.clipboard.writeText(text);
+        console.log("Content copied to clipboard");
+        // Show coppied message
+        coppiedMessage === null || coppiedMessage === void 0 ? void 0 : coppiedMessage.classList.add("copied");
+        // Hide coppied message
+        setTimeout(() => {
+            coppiedMessage === null || coppiedMessage === void 0 ? void 0 : coppiedMessage.classList.remove("copied");
+        }, 2500);
+    }
+    catch (err) {
+        console.error("Failed to copy: ", err);
+    }
+});
 // shuffling a String
 const shufflingString = (str) => {
     return [...str].sort(() => Math.random() - 0.5).join("");
