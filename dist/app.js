@@ -5,6 +5,8 @@ const pwLengthSliderEl = document.getElementById("pw-slider");
 // output
 const pwEl = document.getElementById("password");
 const generatorEL = document.getElementById("generator");
+// controlBoard
+const controlForm = document.getElementById("control");
 // Checkboxs
 const numberCheckboxEl = document.getElementById("number");
 const upperCheckboxEl = document.getElementById("upper");
@@ -72,8 +74,14 @@ const generatePW = (pwLenght) => {
     }
     return password;
 };
-// TODO Update password when setting changed
-// TODO Update password when generate button clicked
+// Update password when setting changed
+controlForm === null || controlForm === void 0 ? void 0 : controlForm.addEventListener("change", function () {
+    generatePW(pwlength);
+});
+// Update password when generate button clicked
+generatorEL === null || generatorEL === void 0 ? void 0 : generatorEL.addEventListener("click", function () {
+    generatePW(pwlength);
+});
 // TODO Copy password to the clipboard
 // shuffling a String
 const shufflingString = (str) => {
