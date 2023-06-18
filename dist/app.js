@@ -10,8 +10,13 @@ pwLengthSliderEl === null || pwLengthSliderEl === void 0 ? void 0 : pwLengthSlid
     pwlength = parseInt(pwLengthSliderEl.value);
     pwLengthOutputEl.textContent = pwlength.toString();
 });
+// password range characters types
+const numbers = "0123456789";
+const upperLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const lowerLetters = "abcdefghijklmnopqrstuvwxyz";
+const symbols = "!@#$%^&*_+=";
+const ambiguousSymbols = "{}[]()/\\'\"`~,;:.<>";
 // Create Password
-// Create password range
 // Select password characters from the password range
 // Rating the password (Bad, Weak, Strong)
 // Update password when setting changed

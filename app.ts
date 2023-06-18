@@ -10,8 +10,14 @@ pwLengthSliderEl?.addEventListener("input", function () {
   pwlength = parseInt((pwLengthSliderEl as HTMLInputElement).value)
   pwLengthOutputEl.textContent = pwlength.toString()
 })
+
+// password range characters types
+const numbers = "0123456789"
+const upperLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+const lowerLetters = "abcdefghijklmnopqrstuvwxyz"
+const symbols = "!@#$%^&*_+="
+const ambiguousSymbols = "{}[]()/\\'\"`~,;:.<>"
 // Create Password
-// Create password range
 // Select password characters from the password range
 
 // Rating the password (Bad, Weak, Strong)
