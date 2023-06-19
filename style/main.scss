@@ -16,6 +16,7 @@
     --bg-second: #212a3e;
     --bg-third: #24243e;
     --text-clr: #80ffd9;
+    --bg-accent: #f45050;
   }
 }
 
@@ -52,4 +53,13 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+
+h1 {
+  font-size: 4.2em;
+  font-weight: 600;
+  background-image: linear-gradient(to left, var(--text-clr), var(--bg-accent));
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
 }
