@@ -16,7 +16,7 @@ const ambiguousSymbolsCheckboxEl = document.getElementById("ambiguousSymbols");
 const rateEl = document.getElementById("rate");
 // copy Button
 const copyBtn = document.getElementById("copy");
-const coppiedMessage = document.getElementById("coppiedMessage");
+const copiedMessage = document.getElementById("copiedMessage");
 // Get password length
 let pwlength = 14; // The default password length
 // Show the Password Length
@@ -92,10 +92,10 @@ copyBtn.addEventListener("click", function async() {
         navigator.clipboard.writeText(text);
         console.log("Content copied to clipboard");
         // Show coppied message
-        coppiedMessage === null || coppiedMessage === void 0 ? void 0 : coppiedMessage.classList.add("copied");
+        copiedMessage === null || copiedMessage === void 0 ? void 0 : copiedMessage.classList.add("copied");
         // Hide coppied message
         setTimeout(() => {
-            coppiedMessage === null || coppiedMessage === void 0 ? void 0 : coppiedMessage.classList.remove("copied");
+            copiedMessage === null || copiedMessage === void 0 ? void 0 : copiedMessage.classList.remove("copied");
         }, 2500);
     }
     catch (err) {
