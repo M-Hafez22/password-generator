@@ -6,6 +6,14 @@
   background-color: rgba(000, 000, 000, 0.2);
   border-radius: 15px;
   padding: 1.2em;
+  #password {
+    font-size: 3em;
+    padding: 0.5em;
+    margin: 0.5em;
+    box-shadow: 0px 0px 2px 2px var(--text-clr);
+    color: var(--accent);
+    border-radius: 10px;
+  }
   .btns {
     display: flex;
     flex-wrap: wrap;
