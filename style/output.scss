@@ -7,5 +7,12 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    button {
+      background-color: var(--text-clr);
+      color: var(--bg-clr);
+      border: none;
+      border-radius: 10px;
+      padding: 1em;
+    }
   }
 }
