@@ -8,3 +8,44 @@
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
 }
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-clr: #212a3e;
+    --bg-first: #0f0c29;
+    --bg-second: #212a3e;
+    --bg-third: #24243e;
+    --text-clr: #80ffd9;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-clr: #22a699;
+    --bg-first: #5544f1;
+    --bg-second: #80ffd9;
+    --bg-third: #8f8ff8;
+    --text-clr: #212a3e;
+  }
+}
+
+body {
+  background: var(--bg-clr);
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    75deg,
+    var(--bg-first),
+    var(--bg-second) 10%,
+    var(--bg-third) 95%
+  );
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    75deg,
+    var(--bg-first),
+    var(--bg-second) 10%,
+    var(--bg-third) 95%
+  );
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  min-height: 100vh;
+  color: var(--text-clr);
+}
