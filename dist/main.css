@@ -29,6 +29,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 2em;
 }
 #output .btns button {
   background-color: var(--text-clr);
@@ -57,7 +58,7 @@
 #copiedMessage.copied {
   opacity: 1;
   pointer-events: auto;
-  transform: translate(100%, 0);
+  transform: translate(-20%, -100%);
 }
 
 *,
