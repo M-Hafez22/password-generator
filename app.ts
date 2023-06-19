@@ -15,7 +15,7 @@ const ambiguousSymbolsCheckboxEl = document.getElementById("ambiguousSymbols")
 const rateEl = document.getElementById("rate")!
 // copy Button
 const copyBtn = document.getElementById("copy")!
-const coppiedMessage = document.getElementById("coppiedMessage")
+const copiedMessage = document.getElementById("copiedMessage")
 
 // Get password length
 let pwlength = 14 // The default password length
@@ -95,10 +95,10 @@ copyBtn.addEventListener("click", function async() {
     navigator.clipboard.writeText(text)
     console.log("Content copied to clipboard")
     // Show coppied message
-    coppiedMessage?.classList.add("copied")
+    copiedMessage?.classList.add("copied")
     // Hide coppied message
     setTimeout(() => {
-      coppiedMessage?.classList.remove("copied")
+      copiedMessage?.classList.remove("copied")
     }, 2500)
   } catch (err) {
     console.error("Failed to copy: ", err)
