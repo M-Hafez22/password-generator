@@ -153,5 +153,6 @@ h1 {
   background-clip: text;
   -webkit-background-clip: text;
   margin: 1em;
+  text-align: center;
 }
 /*# sourceMappingURL=main.css.map */
