@@ -205,6 +205,12 @@ input::-moz-focus-outer {
           transform: translate(-20%, -100%);
 }
 
+#controlBoard {
+  padding: 1.2em;
+  max-width: 40em;
+  margin: 3em 2em;
+}
+
 *,
 ::after,
 ::before {
