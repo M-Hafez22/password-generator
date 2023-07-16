@@ -24,6 +24,8 @@ pwLengthOutputEl.textContent = pwlength.toString()
 pwLengthSliderEl?.addEventListener("input", function () {
   pwlength = parseInt((pwLengthSliderEl as HTMLInputElement).value)
   pwLengthOutputEl.textContent = pwlength.toString()
+  // Rating the password (Bad, Weak, Strong), and changing the slider color
+  ratingPWLength(pwlength, rateEl, pwLengthSliderEl)
 })
 
 // password range characters types
@@ -66,20 +68,28 @@ const generatePW = (pwLenght: number): string => {
       ]
   }
   pwEl.textContent = password
-  // Rating the password (Bad, Weak, Strong)
-  if (password.length > 11) {
-    rateEl.textContent = "Good"
-    pwLengthSliderEl.style.backgroundColor = "green"
-  } else if (password.length > 5) {
-    rateEl.textContent = "Weak"
-    pwLengthSliderEl.style.backgroundColor = "blue"
-  } else if (password.length > 3) {
-    rateEl.textContent = "Bad"
-    pwLengthSliderEl.style.backgroundColor = "red"
-  }
+  // Rating the password (Bad, Weak, Strong), and changing the slider color
+  ratingPWLength(password.length, rateEl, pwLengthSliderEl)
   return password
 }
 
+// Rating the password (Bad, Weak, Strong), and changing the slider color
+const ratingPWLength = (
+  pwLength: number,
+  rateEl: HTMLElement,
+  pwLengthSliderEl: HTMLElement
+) => {
+  if (pwLength > 11) {
+    rateEl.textContent = "Good"
+    pwLengthSliderEl.style.backgroundColor = "green"
+  } else if (pwLength > 5) {
+    rateEl.textContent = "Weak"
+    pwLengthSliderEl.style.backgroundColor = "blue"
+  } else if (pwLength > 3) {
+    rateEl.textContent = "Bad"
+    pwLengthSliderEl.style.backgroundColor = "red"
+  }
+}
 // Update password when setting changed
 controlForm?.addEventListener("change", function () {
   generatePW(pwlength)
