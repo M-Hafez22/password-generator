@@ -5,4 +5,4 @@ working in progress
 TODO
 
 - [ ] Set Color palette
-- [ ] Password rating ()
+- [x] Password rating ()

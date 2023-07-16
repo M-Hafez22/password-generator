@@ -26,7 +26,7 @@ body {
   -webkit-appearance: none;
   -moz-appearance: none;
        appearance: none;
-  width: calc(100% - (73px));
+  width: calc(100% - (93px));
   height: 10px;
   border-radius: 5px;
   background: #d7dcdf;
@@ -74,7 +74,7 @@ body {
 .range-slider__value {
   display: inline-block;
   position: relative;
-  width: 60px;
+  width: 80px;
   color: #fff;
   line-height: 20px;
   text-align: center;
@@ -114,7 +114,7 @@ input::-moz-focus-outer {
   border-radius: 15px;
   padding: 1.2em;
   max-width: 90vw;
-  margin: 3em 2em;
+  margin: 3em 2em 1.5em;
 }
 #output #password {
   flex-wrap: wrap;
@@ -294,4 +294,20 @@ h1 {
   -webkit-background-clip: text;
   margin: 1em;
   text-align: center;
+}
+
+@media only screen and (min-width: 360px) {
+  #app {
+    font-size: 12px;
+  }
+}
+@media only screen and (min-width: 700px) {
+  #app {
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 900px) {
+  #app {
+    font-size: 15px;
+  }
 }/*# sourceMappingURL=main.css.map */
