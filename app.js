@@ -24,6 +24,8 @@ pwLengthOutputEl.textContent = pwlength.toString();
 pwLengthSliderEl === null || pwLengthSliderEl === void 0 ? void 0 : pwLengthSliderEl.addEventListener("input", function () {
     pwlength = parseInt(pwLengthSliderEl.value);
     pwLengthOutputEl.textContent = pwlength.toString();
+    // Rating the password (Bad, Weak, Strong), and changing the slider color
+    ratingPWLength(pwlength, rateEl, pwLengthSliderEl);
 });
 // password range characters types
 const numbers = "0123456789";
@@ -62,20 +64,24 @@ const generatePW = (pwLenght) => {
             shufflingString(passwordRange)[Math.floor(Math.random() * passwordRange.length)];
     }
     pwEl.textContent = password;
-    // Rating the password (Bad, Weak, Strong)
-    if (password.length > 11) {
+    // Rating the password (Bad, Weak, Strong), and changing the slider color
+    ratingPWLength(password.length, rateEl, pwLengthSliderEl);
+    return password;
+};
+// Rating the password (Bad, Weak, Strong), and changing the slider color
+const ratingPWLength = (pwLength, rateEl, pwLengthSliderEl) => {
+    if (pwLength > 11) {
         rateEl.textContent = "Good";
         pwLengthSliderEl.style.backgroundColor = "green";
     }
-    else if (password.length > 5) {
+    else if (pwLength > 5) {
         rateEl.textContent = "Weak";
         pwLengthSliderEl.style.backgroundColor = "blue";
     }
-    else if (password.length > 3) {
+    else if (pwLength > 3) {
         rateEl.textContent = "Bad";
         pwLengthSliderEl.style.backgroundColor = "red";
     }
-    return password;
 };
 // Update password when setting changed
 controlForm === null || controlForm === void 0 ? void 0 : controlForm.addEventListener("change", function () {
