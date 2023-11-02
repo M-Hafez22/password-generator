@@ -4,7 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./icon.png" />
+    <link rel="shortcut icon" href="./icons/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="icon" href="./icons/favicon.png" />
     <link rel="stylesheet" href="main.css">
     <script src="app.js" defer></script>
     <title>Password Generator</title>
@@ -25,7 +29,7 @@
         <div id="controlBoard">
             <form id="control" action="">
                 <div class="range-slider">
-                    <input  class="range-slider__range" type="range" min="4" max="64" step="1" id="pw-slider" value="14">
+                    <input class="range-slider__range" type="range" min="4" max="64" step="1" id="pw-slider" value="14">
                     <span class="range-slider__value">
                         <span id="length">14</span>
                         <span id="rate">(Bad, Weak, Strong)</span>
