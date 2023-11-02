@@ -1,8 +1,10 @@
 # Password Generator
 
-working in progress
+A Password Generator web application
 
-TODO
+## License
 
-- [ ] Set Color palette
-- [x] Password rating ()
+[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
+
+- Licensed under the **[MIT license](LICENSE)**
+- Copyright (c) 2023 Mohamed Hafez
